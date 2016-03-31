@@ -102,41 +102,32 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-6">
-					<form method="post">
-						<div class="row gutter10">
-							<div class="col-sm-6">
-								<div class="form-group">
-									<input type="text" class="form-control" name="name" placeholder="Name">
-								</div>
-							</div>
-							<div class="col-sm-6">
-								<div class="form-group">
-									<input type="text" class="form-control" name="phone" placeholder="Telefonnummer">
-								</div>
-							</div>
-						</div>
-						<div class="form-group">
-							<input type="text" class="form-control" name="email" placeholder="E-Mailadresse">
-						</div>
-						<div class="form-group">
-							<textarea class="form-control" rows="5" name="message" placeholder="Nachricht"></textarea>
-						</div>
-						<div class="row">
-							<div class="col-sm-6">
-								<span class="form-required">* Pflichtfelder</span>
-							</div>
-							<div class="col-sm-6 text-right">
-								<button type="button" class="btn btn-primary">Abschicken</button>
-							</div>
-						</div>
-					</form>
-				</div>
-				<div class="col-sm-6">
-					<div class="section-blurb padding-left30">
+					<div class="section-blurb padding-bottom30">
 						<h1 class="ptserif">Du möchtest mehr erfahren?</h1>
 						<hr class="break break20">
 						<p>Du möchtest mehr über die Versicherung von Mia erfahren? Du möchtest dich selbst oder ein Familienmitglieder privat krankenversichern? Oder du möchtest uns Feedback geben und dich mit uns austauschen? Dann kontaktiere uns jetzt!</p>
 					</div>
+				</div>
+				<div class="col-md-6 col-ms-6">
+					<%= flash[:notice] %>
+					<%= form_tag("/static_pages/thank_you") do %>
+					  	<div class="row gutter10">
+							<div class="col-sm-6">
+							    <div class="form-group">
+							      <%= text_field_tag :name, nil, class: "form-control", placeholder: "Name" %>
+							    </div> 
+					    	</div>
+					    	<div class="col-sm-6">     
+							    <div class="form-group">
+							      <%= text_field_tag :email, nil, class: "form-control", placeholder: "Email-Adresse" %>
+							    </div>
+						    </div>
+						</div>	    
+					    <div class="form-group">
+					      <%= text_area_tag :message, nil, class: "form-control", placeholder: "Nachricht", rows:"5" %>
+					    </div>    
+						<%= submit_tag "Abschicken",:class=>"btn btn-green form-button" %>    
+					<% end %>
 				</div>
 			</div>
 		</div>
