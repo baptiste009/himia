@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>LEO</title>
+  <title>Mia</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= csrf_meta_tags %>
+  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 </head>
 <body class="fixed-header">
 	<nav class="navbar navbar-default">
@@ -20,13 +21,26 @@
 			<div class="collapse navbar-collapse pull-right" id="bs-example-navbar-collapse-1">
 				<ul id="nav" class="nav navbar-nav">
 					<li><a href="#" class="nav-home">Home</a>
-					<li><a href="#" class="nav-kontakt">Kontakt</a>
+					<li><a href="#contact" class="nav-kontakt">Kontakt</a>
 				</ul>
 			</div>
 		</div>
 	</nav>
 
 <%= yield %>
+
+<!-- Footer -->
+<footer>
+	<div class="footer-bottom">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<p>2016 © himia.de &nbsp; &nbsp; <a href="#">Impressum</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
 
 </body>
 </html>
