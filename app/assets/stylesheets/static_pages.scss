@@ -8,13 +8,23 @@
 
 /* Default
 ================================================== */
-html,body{overflow-x:hidden;}
+html,body{overflow-x:hidden;height: 100%;}
 body,p,input,select,textarea,button{font-family:"Open Sans",arial,sans-serif;color:#000;font-size:14px;font-weight:400;}
 a{color:#F47D31;}
 a:hover,a:focus{color:#e86800;text-decoration:none;}
 hr{height:1px;background-color:#000;border:0;}
 h1,h2,h3,h4,h5,h6{margin:0;font-family:"PT Serif",serif;}
 p{line-height:1.6em;}
+
+/* Wrapper for page content to push down footer */
+#wrap {
+  min-height: 100%;
+  height: auto;
+  /* Negative indent footer by its height */
+  margin: 0 auto -60px;
+  /* Pad bottom by footer height */
+  padding: 0 0 60px;
+}
 
 /* Forms
 ================================================== */
@@ -107,7 +117,11 @@ section{min-height:100px;}
 .section{padding:60px 0;}
 	
 .section-hero{position:relative;padding:80px 0 110px;background-color:#fff;}
+
+.section-hero h1{font-family:"PT Serif",serif;font-size:40px;font-weight:300;letter-spacing:-2px;}
+@media screen and (min-width: 620px){
 .section-hero h1{font-family:"PT Serif",serif;font-size:64px;font-weight:300;letter-spacing:-2px;}
+}
 .section-hero h1 strong{font-weight:700;}
 .section-hero .btn{height:54px;padding:14px 22px;font-size:16px;}
 .section-hero #section_next{position:absolute;left:50%;bottom:-110px;margin-left:-26px;width:52px;height:52px;background:#fff image-url("arrowto.png") center no-repeat;outline:0;-webkit-transition:all .2s;transition:all .2s;opacity:.65;filter:alpha(opacity=65);}
@@ -266,3 +280,4 @@ footer ul li{padding:5px 0;}
 
 .img-fullwidth{width:100%;}
 .img-autowidth{width:auto;}
+
